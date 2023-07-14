@@ -8,4 +8,6 @@ public interface ClientService {
     List<String> getAllAddressVer1();
 
     Flux<String> getAllAddressVer2();
+
+    Flux<String> getAllAddressVer3();
 }

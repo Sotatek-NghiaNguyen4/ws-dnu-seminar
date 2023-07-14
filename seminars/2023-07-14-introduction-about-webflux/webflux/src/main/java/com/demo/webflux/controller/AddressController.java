@@ -23,6 +23,8 @@ public class AddressController {
 
     @GetMapping(value = "/v2/get-all-address", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<String> getAllAddressWithReactive() {
-        return Flux.just("Ha Noi", "Hai Duong", "Kon Tum", "Thai Nguyen", "Hung Yen").log().delayElements(Duration.ofSeconds(2));
+        return Flux.just("Ha Noi", "Hai Duong", "Kon Tum", "Thai Nguyen", "Hung Yen")
+                .log()
+                .delayElements(Duration.ofSeconds(2));
     }
 }

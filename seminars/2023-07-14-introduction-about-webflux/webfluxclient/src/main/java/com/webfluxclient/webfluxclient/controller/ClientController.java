@@ -25,4 +25,9 @@ public class ClientController {
     public Flux<String> testGetAllAddressVer2(){
         return clientService.getAllAddressVer2();
     }
+
+    @GetMapping("/v3/call-to-a-fake-api")
+    public Flux<String> testGetAllAddressVer3(){
+        return clientService.getAllAddressVer3();
+    }
 }
