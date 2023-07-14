@@ -46,4 +46,10 @@ public class StudentController {
         return studentMono.zipWith(addressMono)
                 .map(value -> StudentFullInfo.from(value.getT1(), value.getT2()));
     }
+
+    @GetMapping("/v3/get-by-id/{studentId}")
+    public Mono<Student> getStudentMonoById(@PathVariable("studentId") final String studentId){
+        Student student = studentService.getById(studentId);
+        return Mono.just(student);
+    }
 }
